@@ -4,7 +4,7 @@
 //function cross(x,y) = [x[1]*y[2]-x[2]*y[1], x[2]*y[0]-x[0]*y[2], x[0]*y[1]-x[1]*y[0]];
 //function norm(v) = sqrt(v*v);
 
-function vec3(p) = len(p) < 3 ? concat(p,0) : p;
+function vec3(p) = len(p) < 3 ? vec3(concat(p,0)) : p;
 function vec4(p) = let (v3=vec3(p)) len(v3) < 4 ? concat(v3,1) : v3;
 function unit(v) = v/norm(v);
 
